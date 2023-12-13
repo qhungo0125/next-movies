@@ -17,6 +17,8 @@ export async function generateStaticParams() {
     });
   });
 
+  console.log(listMovieId.length);
+
   return listMovieId;
 }
 
