@@ -1,6 +1,7 @@
 import { getCaster, getMovie, getMovies } from "@/libs/api/movies";
-import React from "react";
+import React, { Suspense } from "react";
 import MainDetail from "@/components/movieDetail";
+import Loading from "../loading";
 
 export async function generateStaticParams() {
   const moviesPages = await Promise.all([
@@ -36,7 +37,11 @@ const MoviePage = async ({ params }) => {
   //   return NotFound();
   // }
 
-  return <MainDetail info={data} casters={casters.cast} />;
+  return (
+    <Suspense fallback={<Loading />}>
+      <MainDetail info={data} casters={casters.cast} />
+    </Suspense>
+  );
 };
 
 export default MoviePage;
