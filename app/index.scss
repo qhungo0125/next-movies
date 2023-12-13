@@ -28,3 +28,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    margin: 1rem;
+    background-color: black;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+}

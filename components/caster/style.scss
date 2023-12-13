@@ -1,0 +1,19 @@
+@use "../../styles/" as *;
+
+.caster {
+  // justify-content: center;
+  width: 18%;
+  text-align: center;
+  img {
+    width: 100%;
+    border-radius: 0.6rem;
+    height: 300px !important;
+    @include tablet {
+      height: 180px !important;
+    }
+  }
+  .caster__name {
+    text-align: center;
+    font-weight: 500;
+  }
+}

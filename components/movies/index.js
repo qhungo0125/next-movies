@@ -4,12 +4,7 @@ import "./style.scss";
 
 const Movies = (props) => {
   const { movies = [] } = props;
-
-  // if (!movies.length) {
-  //   console.log("null");
-  //   return null;
-  // }
-
+  
   return (
     <div className="slider__item">
       {movies.map((movie) => {
