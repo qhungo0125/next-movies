@@ -1,6 +1,12 @@
+import { getMovies } from "@/libs/api/movies";
+import Movies from "@/components/movies";
+import "./index.scss";
+import { Suspense } from "react";
 
-export default function Home() {
+export default async function Home() {
+  const movies = await getMovies();
+
   return (
-    <div>home page</div>
-  )
+      <Movies movies={movies} />
+  );
 }
